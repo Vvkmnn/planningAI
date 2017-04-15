@@ -2,7 +2,7 @@
 
 The third project in the [Artificial Intelligence Nanodegree program](https://classroom.udacity.com/nanodegrees/nd889/syllabus), centered around the implementation of uniformed and informed (heuristic) planning search.
 
-![](images/pygame.gif)
+![](images/batch_search.gif)
 
 
 # Implement a Planning Search
