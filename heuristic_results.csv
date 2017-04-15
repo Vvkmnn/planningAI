@@ -1,0 +1,997 @@
+Problem,Search Strategy,Search Strategy Name,Expansions,Goal Tests,New Nodes,Optimal Plan,Optimal Plan Length,Duration,,,,,,,,,,,,,,,,,,,
+1,1,breadth_first_search, 43.00 , 56.00 , 180.00 ,"Load(C1, P1, SFO)Load(C2, P2, JFK)Fly(P2, JFK, SFO)Unload(C2, P2, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)",6, 0.08 ,,,,,,,,,,,,,,,,,,,
+2,1,breadth_first_search," 3,343.00 "," 4,609.00 "," 30,509.00 ","Load(C1, P1, SFO)Load(C2, P2, JFK)Load(C3, P3, ATL)Fly(P2, JFK, SFO)Unload(C2, P2, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)Fly(P3, ATL, SFO)Unload(C3, P3, SFO)",9, 50.44 ,,,,,,,,,,,,,,,,,,,
+3,1,breadth_first_search," 8,062.00 "," 11,196.00 "," 64,308.00 ","Load(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Load(C2, P1, JFK)Unload(C1, P1, JFK)Unload(C3, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C2, P1, SFO)Unload(C4, P1, SFO)",12, 137.47 ,,,,,,,,,,,,,,,,,,,
+1,2,breadth_first_tree_search," 1,458.00 "," 1,459.00 "," 5,960.00 ","Load(C1, P1, SFO)Load(C2, P2, JFK)Fly(P2, JFK, SFO)Unload(C2, P2, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)",6, 2.01 ,,,,,,,,,,,,,,,,,,,
+2,2,breadth_first_tree_search,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,,,,,,,,,,,,,,,,,,
+3,2,breadth_first_tree_search,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,,,,,,,,,,,,,,,,,,
+1,3,depth_first_graph_search, 21.00 , 22.00 , 84.00 ,"Fly(P1, SFO, JFK)Fly(P2, JFK, SFO)Load(C2, P1, JFK)Fly(P1, JFK, SFO)Fly(P2, SFO, JFK)Unload(C2, P1, SFO)Fly(P1, SFO, JFK)Fly(P2, JFK, SFO)Load(C2, P2, SFO)Fly(P1, JFK, SFO)Load(C1, P2, SFO)Fly(P2, SFO, JFK)Fly(P1, SFO, JFK)Unload(C2, P2, JFK)Unload(C1, P2, JFK)Fly(P2, JFK, SFO)Load(C2, P1, JFK)Fly(P1, JFK, SFO)Fly(P2, SFO, JFK)Unload(C2, P1, SFO)",20, 0.02 ,,,,,,,,,,,,,,,,,,,
+2,3,depth_first_graph_search, 624.00 , 625.00 ," 5,602.00 ","Fly(P1, SFO, ORD)Fly(P2, JFK, ATL)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, SFO)Load(C1, P1, SFO)Fly(P1, SFO, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, JFK)Load(C2, P1, JFK)Fly(P1, JFK, ORD)Unload(C2, P1, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, SFO)Load(C1, P1, SFO)Fly(P1, SFO, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, JFK)Unload(C2, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, JFK)Load(C1, P1, JFK)Fly(P1, JFK, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, JFK)Load(C2, P1, JFK)Fly(P1, JFK, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, SFO)Load(C1, P1, SFO)Fly(P1, SFO, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C4, P1, ORD)Fly(P1, ORD, JFK)Unload(C4, P1, JFK)Fly(P1, JFK, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Load(C3, P1, ATL)Fly(P1, ATL, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Load(C3, P1, ORD)Fly(P1, ORD, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, SFO)Load(C1, P1, SFO)Fly(P1, SFO, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, JFK)Unload(C3, P1, JFK)Fly(P1, JFK, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, JFK)Load(C4, P1, JFK)Fly(P1, JFK, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Load(C1, P1, ORD)Fly(P1, ORD, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, JFK)Load(C3, P1, JFK)Fly(P1, JFK, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Load(C1, P1, SFO)Fly(P1, SFO, JFK)Unload(C4, P1, JFK)Fly(P1, JFK, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, JFK)Load(C4, P1, JFK)Fly(P1, JFK, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, SFO)Load(C1, P1, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ORD)Unload(C2, P1, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Unload(C3, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Load(C2, P1, ATL)Fly(P1, ATL, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Load(C2, P1, ORD)Fly(P1, ORD, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, JFK)Load(C1, P1, JFK)Fly(P1, JFK, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C4, P1, ORD)Load(C1, P1, ORD)Fly(P1, ORD, JFK)Load(C3, P1, JFK)Fly(P1, JFK, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C1, P1, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C2, P1, ATL)Fly(P1, ATL, JFK)Unload(C2, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Load(C1, P1, SFO)Fly(P1, SFO, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, JFK)Unload(C3, P1, JFK)Fly(P1, JFK, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, JFK)Load(C3, P1, JFK)Fly(P1, JFK, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C3, P1, SFO)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, JFK)Load(C1, P1, JFK)Fly(P1, JFK, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, JFK)Load(C2, P1, JFK)Fly(P1, JFK, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ATL)Load(C4, P1, ATL)Fly(P1, ATL, ORD)Unload(C4, P1, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, JFK)Unload(C3, P1, JFK)Fly(P1, JFK, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, JFK)Load(C3, P1, JFK)Fly(P1, JFK, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Unload(C3, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, JFK)Unload(C4, P1, JFK)Fly(P1, JFK, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ORD)Unload(C2, P1, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, ORD)Load(C2, P1, ORD)Fly(P1, ORD, JFK)Unload(C2, P1, JFK)Fly(P1, JFK, ATL)Load(C1, P1, ATL)Fly(P1, ATL, ORD)Unload(C1, P1, ORD)Fly(P1, ORD, JFK)Load(C3, P1, JFK)Fly(P1, JFK, ORD)Unload(C3, P1, ORD)Load(C1, P1, ORD)Fly(P1, ORD, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Load(C1, P1, ATL)Fly(P1, ATL, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Unload(C3, P1, SFO)Load(C1, P1, SFO)Fly(P1, SFO, ATL)Unload(C1, P1, ATL)Fly(P1, ATL, JFK)Load(C4, P1, JFK)Fly(P1, JFK, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, JFK)Load(C2, P1, JFK)Fly(P1, JFK, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C1, P1, ATL)Fly(P1, ATL, SFO)Load(C4, P1, SFO)Fly(P1, SFO, ORD)Load(C2, P1, ORD)Fly(P1, ORD, JFK)Unload(C4, P1, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, SFO)Load(C3, P1, SFO)Fly(P1, SFO, ORD)Unload(C3, P1, ORD)Load(C2, P1, ORD)Fly(P1, ORD, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, ORD)Load(C3, P1, ORD)Fly(P1, ORD, ATL)Unload(C3, P1, ATL)Load(C2, P1, ATL)Fly(P1, ATL, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, SFO)Load(C2, P1, SFO)Fly(P1, SFO, JFK)Unload(C3, P1, JFK)Unload(C2, P1, JFK)Load(C4, P1, JFK)Load(C1, P1, JFK)Fly(P1, JFK, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, JFK)Load(C2, P1, JFK)Fly(P1, JFK, ORD)Unload(C2, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, JFK)Unload(C4, P1, JFK)Fly(P1, JFK, ORD)Load(C2, P1, ORD)Fly(P1, ORD, SFO)Unload(C2, P1, SFO)Fly(P1, SFO, JFK)Load(C4, P1, JFK)Fly(P1, JFK, ORD)Unload(C4, P1, ORD)Fly(P1, ORD, SFO)Load(C1, P1, SFO)Fly(P1, SFO, JFK)Load(C3, P1, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ATL)Unload(C3, P1, ATL)Fly(P1, ATL, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Load(C2, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Unload(C4, P1, ATL)Fly(P1, ATL, JFK)Load(C1, P1, JFK)Fly(P1, JFK, ORD)Unload(C3, P1, ORD)Fly(P1, ORD, ATL)Load(C4, P1, ATL)Fly(P1, ATL, SFO)Unload(C1, P1, SFO)Fly(P1, SFO, ATL)Unload(C2, P1, ATL)Fly(P1, ATL, SFO)Load(C1, P1, SFO)Unload(C4, P1, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Load(C3, P1, ORD)Fly(P1, ORD, JFK)Unload(C3, P1, JFK)Fly(P1, JFK, ATL)Load(C2, P1, ATL)Fly(P1, ATL, SFO)Unload(C2, P1, SFO)",875, 8.26 ,,,,,,,,,,,,,,,,,,,
+3,3,depth_first_graph_search," 1,292.00 "," 12,983.00 "," 5,744.00 ","Fly(P1, SFO, ORD) Fly(P2, JFK, ATL) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, SFO) Load(C1, P1, SFO) Fly(P1, SFO, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, JFK) Load(C2, P1, JFK) Fly(P1, JFK, ORD) Unload(C2, P1, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, SFO) Load(C1, P1, SFO) Fly(P1, SFO, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, JFK) Unload(C1, P1, JFK) Fly(P1, JFK, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, JFK) Unload(C2, P1, JFK) Fly(P1, JFK, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, JFK) Load(C1, P1, JFK) Fly(P1, JFK, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, JFK) Load(C2, P1, JFK) Fly(P1, JFK, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, SFO) Load(C1, P1, SFO) Fly(P1, SFO, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C4, P1, ORD) Fly(P1, ORD, JFK) Unload(C4, P1, JFK) Fly(P1, JFK, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Load(C3, P1, ATL) Fly(P1, ATL, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Load(C3, P1, ORD) Fly(P1, ORD, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, SFO) Load(C1, P1, SFO) Fly(P1, SFO, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, JFK) Unload(C3, P1, JFK) Fly(P1, JFK, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, JFK) Load(C4, P1, JFK) Fly(P1, JFK, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Load(C1, P1, ORD) Fly(P1, ORD, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, JFK) Load(C3, P1, JFK) Fly(P1, JFK, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C4, P1, ORD) Fly(P1, ORD, SFO) Load(C1, P1, SFO) Fly(P1, SFO, JFK) Unload(C4, P1, JFK) Fly(P1, JFK, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, JFK) Load(C4, P1, JFK) Fly(P1, JFK, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, SFO) Load(C1, P1, SFO) Fly(P1, SFO, JFK) Unload(C1, P1, JFK) Fly(P1, JFK, ORD) Load(C4, P1, ORD) Fly(P1, ORD, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, SFO) Unload(C4, P1, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ORD) Unload(C2, P1, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, JFK) Unload(C3, P1, JFK) Fly(P1, JFK, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Load(C2, P1, ATL) Fly(P1, ATL, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Load(C2, P1, ORD) Fly(P1, ORD, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, JFK) Load(C1, P1, JFK) Fly(P1, JFK, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C4, P1, ORD) Load(C1, P1, ORD) Fly(P1, ORD, JFK) Load(C3, P1, JFK) Fly(P1, JFK, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C1, P1, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C2, P1, ATL) Fly(P1, ATL, JFK) Unload(C2, P1, JFK) Fly(P1, JFK, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Load(C1, P1, SFO) Fly(P1, SFO, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, JFK) Unload(C3, P1, JFK) Fly(P1, JFK, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Load(C4, P1, ORD) Fly(P1, ORD, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, JFK) Load(C3, P1, JFK) Fly(P1, JFK, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, JFK) Unload(C1, P1, JFK) Fly(P1, JFK, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C3, P1, SFO) Fly(P1, SFO, ORD) Load(C4, P1, ORD) Fly(P1, ORD, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, JFK) Load(C1, P1, JFK) Fly(P1, JFK, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, JFK) Load(C2, P1, JFK) Fly(P1, JFK, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ATL) Load(C4, P1, ATL) Fly(P1, ATL, ORD) Unload(C4, P1, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, JFK) Unload(C3, P1, JFK) Fly(P1, JFK, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, JFK) Load(C3, P1, JFK) Fly(P1, JFK, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C3, P1, ATL) Fly(P1, ATL, JFK) Unload(C3, P1, JFK) Fly(P1, JFK, ORD) Load(C4, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, JFK) Unload(C4, P1, JFK) Fly(P1, JFK, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ORD) Unload(C2, P1, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, ORD) Load(C2, P1, ORD) Fly(P1, ORD, JFK) Unload(C2, P1, JFK) Fly(P1, JFK, ATL) Load(C1, P1, ATL) Fly(P1, ATL, ORD) Unload(C1, P1, ORD) Fly(P1, ORD, JFK) Load(C3, P1, JFK) Fly(P1, JFK, ORD) Unload(C3, P1, ORD) Load(C1, P1, ORD) Fly(P1, ORD, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Load(C1, P1, ATL) Fly(P1, ATL, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Unload(C3, P1, SFO) Load(C1, P1, SFO) Fly(P1, SFO, ATL) Unload(C1, P1, ATL) Fly(P1, ATL, JFK) Load(C4, P1, JFK) Fly(P1, JFK, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, JFK) Load(C2, P1, JFK) Fly(P1, JFK, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C1, P1, ATL) Fly(P1, ATL, SFO) Load(C4, P1, SFO) Fly(P1, SFO, ORD) Load(C2, P1, ORD) Fly(P1, ORD, JFK) Unload(C4, P1, JFK) Unload(C1, P1, JFK) Fly(P1, JFK, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, SFO) Load(C3, P1, SFO) Fly(P1, SFO, ORD) Unload(C3, P1, ORD) Load(C2, P1, ORD) Fly(P1, ORD, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, ORD) Load(C3, P1, ORD) Fly(P1, ORD, ATL) Unload(C3, P1, ATL) Load(C2, P1, ATL) Fly(P1, ATL, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, ATL) Load(C3, P1, ATL) Fly(P1, ATL, SFO) Load(C2, P1, SFO) Fly(P1, SFO, JFK) Unload(C3, P1, JFK) Unload(C2, P1, JFK) Load(C4, P1, JFK) Load(C1, P1, JFK) Fly(P1, JFK, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, JFK) Load(C2, P1, JFK) Fly(P1, JFK, ORD) Unload(C2, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, JFK) Unload(C4, P1, JFK) Fly(P1, JFK, ORD) Load(C2, P1, ORD) Fly(P1, ORD, SFO) Unload(C2, P1, SFO) Fly(P1, SFO, JFK) Load(C4, P1, JFK) Fly(P1, JFK, ORD) Unload(C4, P1, ORD) Fly(P1, ORD, SFO) Load(C1, P1, SFO) Fly(P1, SFO, JFK) Load(C3, P1, JFK) Unload(C1, P1, JFK) Fly(P1, JFK, ATL) Unload(C3, P1, ATL) Fly(P1, ATL, ORD) Load(C4, P1, ORD) Fly(P1, ORD, SFO) Load(C2, P1, SFO) Fly(P1, SFO, ATL) Load(C3, P1, ATL) Unload(C4, P1, ATL) Fly(P1, ATL, JFK) Load(C1, P1, JFK) Fly(P1, JFK, ORD) Unload(C3, P1, ORD) Fly(P1, ORD, ATL) Load(C4, P1, ATL) Fly(P1, ATL, SFO) Unload(C1, P1, SFO) Fly(P1, SFO, ATL) Unload(C2, P1, ATL) Fly(P1, ATL, SFO) Load(C1, P1, SFO) Unload(C4, P1, SFO) Fly(P1, SFO, JFK) Unload(C1, P1, JFK) Fly(P1, JFK, ORD) Load(C3, P1, ORD) Fly(P1, ORD, JFK) Unload(C3, P1, JFK) Fly(P1, JFK, ATL) Load(C2, P1, ATL) Fly(P1, ATL, SFO) Unload(C2, P1, SFO)",875, 7.79 ,,,,,,,,,,,,,,,,,,,
+1,4,depth_limited_search, 101.00 , 271.00 , 414.00 ,"Load(C1, P1, SFO) Load(C2, P2, JFK) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Unload(C1, P1, SFO) Load(C1, P1, SFO) Fly(P2, JFK, SFO) Unload(C2, P2, SFO) Fly(P1, SFO, JFK) Unload(C1, P1, JFK)",50, 0.19 ,,,,,,,,,,,,,,,,,,,
+2,4,depth_limited_search,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,,,,,,,,,,,,,,,,,,
+3,4,depth_limited_search,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,,,,,,,,,,,,,,,,,,
+1,5,uniform_cost_search, 55.00 , 57.00 , 224.00 ,"Load(C1, P1, SFO)Load(C2, P2, JFK)Fly(P1, SFO, JFK)Fly(P2, JFK, SFO)Unload(C1, P1, JFK)Unload(C2, P2, SFO)",6, 0.17 ,,,,,,,,,,,,,,,,,,,
+2,5,uniform_cost_search," 4,853.00 "," 4,855.00 "," 44,041.00 ","Load(C1, P1, SFO)Load(C2, P2, JFK)Load(C3, P3, ATL)Fly(P1, SFO, JFK)Fly(P2, JFK, SFO)Fly(P3, ATL, SFO)Unload(C3, P3, SFO)Unload(C2, P2, SFO)Unload(C1, P1, JFK)",9, 123.76 ,,,,,,,,,,,,,,,,,,,
+3,5,uniform_cost_search," 11,482.00 "," 11,484.00 "," 85,785.00 ","Load(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Load(C2, P1, JFK)Unload(C3, P1, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Unload(C2, P1, SFO)",12, 414.75 ,,,,,,,,,,,,,,,,,,,
+1,6,recursive_best_first_search with h_1," 4,429.00 "," 4,230.00 "," 17,023.00 ","Load(C2, P2, JFK)Load(C1, P1, SFO)Fly(P2, JFK, SFO)Unload(C2, P2, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)",6, 6.77 ,,,,,,,,,,,,,,,,,,,
+2,6,recursive_best_first_search with h_1,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,,,,,,,,,,,,,,,,,,
+3,6,recursive_best_first_search with h_1,#N/A,#N/A,#N/A,#N/A,#N/A,#N/A,,,,,,,,,,,,,,,,,,,
+1,7,greedy_best_first_graph_search with h_1, 7.00 , 9.00 , 28.00 ,"Load(C1, P1, SFO)Load(C2, P2, JFK)Fly(P1, SFO, JFK)Fly(P2, JFK, SFO)Unload(C1, P1, JFK)Unload(C2, P2, SFO)",6, 0.06 ,,,,,,,,,,,,,,,,,,,
+2,7,greedy_best_first_graph_search with h_1, 998.00 ," 1,000.00 "," 8,982.00 ","Load(C1, P1, SFO)Load(C2, P2, JFK)Load(C3, P3, ATL)Fly(P1, SFO, ATL)Fly(P2, JFK, ATL)Fly(P3, ATL, JFK)Fly(P2, ATL, SFO)Unload(C2, P2, SFO)Fly(P2, SFO, ATL)Fly(P3, JFK, SFO)Load(C2, P3, SFO)Fly(P3, SFO, JFK)Fly(P1, ATL, JFK)Unload(C1, P1, JFK)Load(C1, P3, JFK)Fly(P1, JFK, ATL)Fly(P3, JFK, SFO)Unload(C3, P3, SFO)Unload(C2, P3, SFO)Fly(P3, SFO, JFK)Unload(C1, P3, JFK)",21, 19.39 ,,,,,,,,,,,,,,,,,,,
+3,7,greedy_best_first_graph_search with h_1, 907.00 , 909.00 ," 5,581.00 ","Load(C1, P1, SFO)Load(C2, P2, JFK)Fly(P1, SFO, ORD)Load(C4, P1, ORD)Fly(P2, JFK, SFO)Fly(P1, ORD, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Unload(C4, P1, JFK)Fly(P1, JFK, ORD)Fly(P2, SFO, JFK)Load(C4, P2, JFK)Fly(P2, JFK, SFO)Fly(P1, ORD, JFK)Unload(C3, P1, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Unload(C4, P2, SFO)Unload(C2, P2, SFO)",19, 8.34 ,,,,,,,,,,,,,,,,,,,
+1,8,astar_search with h_1, 55.00 , 57.00 , 224.00 ,"Load(C1, P1, SFO)Load(C2, P2, JFK)Fly(P1, SFO, JFK)Fly(P2, JFK, SFO)Unload(C1, P1, JFK)Unload(C2, P2, SFO)",6, 0.09 ,,,,,,,,,,,,,,,,,,,
+2,8,astar_search with h_1," 4,853.00 "," 4,855.00 "," 44,041.00 ","Load(C1, P1, SFO)Load(C2, P2, JFK)Load(C3, P3, ATL)Fly(P1, SFO, JFK)Fly(P2, JFK, SFO)Fly(P3, ATL, SFO)Unload(C3, P3, SFO)Unload(C2, P2, SFO)Unload(C1, P1, JFK)",9, 134.18 ,,,,,,,,,,,,,,,,,,,
+3,8,astar_search with h_1," 11,482.00 "," 11,484.00 "," 85,785.00 ","Load(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Load(C2, P1, JFK)Unload(C3, P1, JFK)Unload(C1, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Unload(C2, P1, SFO)",12, 506.59 ,,,,,,,,,,,,,,,,,,,
+1,9,astar_search with h_ignore_preconditions, 41.00 , 43.00 , 170.00 ,"Load(C1, P1, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)Load(C2, P2, JFK)Fly(P2, JFK, SFO)Unload(C2, P2, SFO)",6, 0.13 ,,,,,,,,,,,,,,,,,,,
+2,9,astar_search with h_ignore_preconditions," 1,506.00 "," 1,508.00 "," 13,820.00 ","Load(C3, P3, ATL)Fly(P3, ATL, SFO)Unload(C3, P3, SFO)Load(C2, P2, JFK)Fly(P2, JFK, SFO)Unload(C2, P2, SFO)Load(C1, P1, SFO)Fly(P1, SFO, JFK)Unload(C1, P1, JFK)",9, 43.81 ,,,,,,,,,,,,,,,,,,,
+3,9,astar_search with h_ignore_preconditions," 2,494.00 "," 2,496.00 "," 19,532.00 ","Load(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Unload(C3, P1, JFK)Unload(C1, P1, JFK)Load(C2, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Unload(C2, P1, SFO)",12, 72.08 ,,,,,,,,,,,,,,,,,,,
+1,10,astar_search with h_pg_levelsum, 11.00 , 13.00 , 50.00 ,"Load(C1, P1, SFO)Fly(P1, SFO, JFK)Load(C2, P2, JFK)Fly(P2, JFK, SFO)Unload(C1, P1, JFK)Unload(C2, P2, SFO)",6, 5.85 ,,,,,,,,,,,,,,,,,,,
+2,10,astar_search with h_pg_levelsum, 86.00 , 88.00 , 841.00 ,"Load(C1, P1, SFO)Fly(P1, SFO, JFK)Load(C2, P2, JFK)Fly(P2, JFK, SFO)Load(C3, P3, ATL)Fly(P3, ATL, SFO)Unload(C3, P3, SFO)Unload(C2, P2, SFO)Unload(C1, P1, JFK)",9, 825.51 ,,,,,,,,,,,,,,,,,,,
+3,10,astar_search with h_pg_levelsum, 306.00 , 308.00 ," 2,148.00 ","Load(C1, P1, SFO)Fly(P1, SFO, ATL)Load(C3, P1, ATL)Fly(P1, ATL, JFK)Unload(C3, P1, JFK)Unload(C1, P1, JFK)Load(C2, P1, JFK)Fly(P1, JFK, ORD)Load(C4, P1, ORD)Fly(P1, ORD, SFO)Unload(C4, P1, SFO)Unload(C2, P1, SFO)",12," 2,102.74 ",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,
