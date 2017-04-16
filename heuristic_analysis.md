@@ -3,7 +3,8 @@
 
 ## Results
 
-![](images/SummaryTable.png)
+[![](images/SummaryTable.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
+
 
 When `depth_limited_search` found a search, it was typically the quickest to find a solution, but it was almost always insane. The best metric for measuring search performance (in my opinion) is **Optimal Plan Length** which averages the solutions to demonstrate performance across all 3 problems. 
 
@@ -20,7 +21,7 @@ These were the shortest search paths found by any kind of search, informed or ot
 
 ### Uninformed Search Strategies
 
-![](images/UniformedStrategies.png)
+[![](images/UniformedStrategies.png)](https://public.tableau.com/views/planningAI/UniformedSearchStrategies?:embed=y&:display_count=yes)
 
 These strategies are uninformed, and rely only on the immediate frontier to make decisions. 
 
@@ -31,14 +32,29 @@ These strategies are uninformed, and rely only on the immediate frontier to make
 
 ### Heuristic Search Strategies
 
-![](images/InformedStrategies.png)
+[![](images/InformedStrategies.png)](https://public.tableau.com/views/planningAI/InformedSearchStrategies?:embed=y&:display_count=yes)
 
 Compare and contrast heuristic search result metrics using A* with the and "level-sum" heuristics for Problems 1, 2, and 3.
 
-`astar_search with h_ignore_preconditions` used the fewest the resources and ran the fastest, implying reduced algorithmic complexity. I was honestly kind of shocked at its performance. That said, all of the informed searches outranked the uninformed searches, always found the best solution, and had clear optimizations for space (`astar_search_with_h_ignore_preconditions`) or time (`astar_search_with_h_ignore_preconditions`). 
+`astar_search with h_pg_levelsum` used the fewest the resources implying reduced algorithmic complexity. I was very impressed with its performance; but as the most well defined problem, this is not atypical. That said, all of the informed searches outranked the uninformed searches, always found the best solution, often with an increased cost in space (`astar_search_with_h1`) or time (`astar_search_with_h_ignore_preconditions`). 
 
 ### Conclusion
-TODO: What was the best heuristic used in these problems? Was it better than non-heuristic search planning methods for all problems? Why or why not?
 
-My understanding ofthe differenece between `h_1`, `h_ignore_preconditions` and `h_pg_levelsum` are still a little shaky, but I hope when I catch up on the readings they'll make a little more sense. 
+| `h_1`        | `h_ignore_preconditions`           | `h_pg_levelsum`  |
+| ------------- |-------------| -----|
+| `# note that this is not a true heuristic` This heuristic is just a constant of 1 | This heuristic estimates the minimum number of actions that must be carried out from the current state in order to satisfy all of the goal conditions by ignoring the preconditions required for an action to be executed. |         This heuristic uses a planning graph representation of the problem state space to estimate the sum of all actions that must be carried out from the current state in order to satisfy each individual goal condition. |
+
+[![](images/SummaryTable.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
+
+#### `astar_search with h_pg_levelsum` 
+Relatively more space effecient than any other search strategy, despite taking a little longer to run. With the entire structure of the planning graph, it is the most well defined problem. 
+
+#### `astar_search_with_h1`
+Wasn't really an informed search since `h1` is arbitrary, so it ended up just being a more expensive BFS, since we took one step further than we needed to every time.  
+
+#### `astar_search_with_h_ignore_preconditions` 
+Yielded some significant savings as well, and reached an optimal solution faster without the whole planning graph. Definitely the all-star in my book; a good tradeoff between implementational scale and effeciency. 
+
+[![](images/SummaryTable_Highlight.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
+
 
