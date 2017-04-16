@@ -14,27 +14,62 @@ from run_search import run_search
 
 
 class HaveCakeProblem(Problem):
+
     def __init__(self, initial: FluentState, goal: list):
         self.state_map = initial.pos + initial.neg
-        Problem.__init__(self, encode_state(initial, self.state_map), goal=goal)
+        Problem.__init__(self, encode_state(
+            initial, self.state_map), goal=goal)
         self.actions_list = self.get_actions()
 
     def get_actions(self):
+
+        # Action 1: Eating a Cake
+        # Preconditions
         precond_pos = [expr("Have(Cake)")]
         precond_neg = []
+
+        # Positive and Negative Effects
+        # Adds this to the positive state
         effect_add = [expr("Eaten(Cake)")]
         effect_rem = [expr("Have(Cake)")]
+
+        # Eat action is defined when you have a cake via precond_pos
+        # No precond_neg, so effect_rem returns cake
         eat_action = Action(expr("Eat(Cake)"),
                             [precond_pos, precond_neg],
                             [effect_add, effect_rem])
+
+        # Action 2: Baking a Cake
+        # Preconditions
         precond_pos = []
         precond_neg = [expr("Have(Cake)")]
+
+        # Positive and Negative Effects
+        # Then uses these truth statements to flip the switches of whats in which state
         effect_add = [expr("Have(Cake)")]
         effect_rem = []
+
+        # Bake action is defined only when you have no cake via precond_pos
+        # If negative, after Bake(Cake) you Have(Cake)
         bake_action = Action(expr("Bake(Cake)"),
                              [precond_pos, precond_neg],
                              [effect_add, effect_rem])
         return [eat_action, bake_action]
+
+        # Test Action: Decorating a Cake
+        # Preconditions
+        # FIXME: Not really working out. Probably leaving too many positives or negatives for a goal.
+        precond_pos = [expr("Decorate(Cake)")]
+        precond_neg = [expr("Eaten(Cake)")]
+
+        # Positive and Negative Effects
+        effect_add = [expr("Have(Cake)")]
+        effect_rem = []
+
+        decorate_action = Action(expr("Decorate(Cake)"),
+                                 [precond_pos, precond_neg],
+                                 [effect_add, effect_rem])
+        return [decorate_action, bake_action]
 
     def actions(self, state: str) -> list:  # of Action
         possible_actions = []
@@ -96,12 +131,18 @@ class HaveCakeProblem(Problem):
         return count
 
 
+## Let's try some different worlds
+# World 1 - Preconditions: Have(Cake), !Eaten(Cake)
+# World 2 - Preconditions: !Have(Cake), !Eaten(Cake) > uses Bake(Cake)
+# World 3 - Preconditions: !Have(Cake), !Eaten(Cake) > uses Bake(Cake)
 def have_cake():
     def get_init():
-        pos = [expr('Have(Cake)'),
-               ]
-        neg = [expr('Eaten(Cake)'),
-               ]
+        pos = [
+        ]
+        neg = [
+            expr('Have(Cake)'),
+            expr('Eaten(Cake)'),
+        ]
         return FluentState(pos, neg)
 
     def get_goal():
