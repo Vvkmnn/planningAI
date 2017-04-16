@@ -62,18 +62,25 @@ Yielded some significant savings as well, and reached an optimal solution faster
 
 [![](images/SummaryTable_Highlight.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
 
-## Environment requirements
-- Python 3.4 or higher (via Anaconda preferably)
-- Starter code includes a copy of [companion code](https://github.com/aimacode) for the Stuart Russel/Norvig AIMA text.  
 
 
 ## Setup
 
-This project includes skeletons for the classes and functions needed to solve deterministic logistics planning problems for an Air Cargo transport system using a planning search agent. 
-With progression search algorithms like those in the navigation problem from lecture, optimal plans for each 
-problem will be computed.  Unlike the navigation problem, there is no simple distance heuristic to aid the agent. 
-Instead, you will implement domain-independent heuristics.
+### Environment
+- Python 3.4 or higher (via Anaconda preferably)
+- Starter code includes a copy of [companion code](https://github.com/aimacode) for the Stuart Russel/Norvig AIMA text.  
+
+### Problem
+
 ![Progression air cargo search](images/Progression.PNG)
+
+This project includes skeletons for the classes and functions needed to solve deterministic logistics planning problems for an Air Cargo transport system using a planning search agent. 
+
+With progression search algorithms like those in the navigation problem from lecture, optimal plans for each 
+problem will be computed.  
+
+Unlike the navigation problem, there is no simple distance heuristic to aid the agent. 
+Instead, you will implement domain-independent heuristics.
 
 - Part 1 - Planning problems:
 	- READ: applicable portions of the Russel/Norvig AIMA text
@@ -88,16 +95,37 @@ Instead, you will implement domain-independent heuristics.
 - Part 3 - Written Analysis
 
 
-## Project Details
-### Part 1 - Planning problems
-#### READ: Stuart Russel and Peter Norvig text:
+### Part 1 - Planning Problems
 
-"Artificial Intelligence: A Modern Approach" 3rd edition chapter 10 *or* 2nd edition Chapter 11 on Planning, available [on the AIMA book site](http://aima.cs.berkeley.edu/2nd-ed/newchap11.pdf) sections: 
+#### Ref: "Artificial Intelligence: A Modern Approach" 3rd edition chapter 10 *or* 2nd edition Chapter 11 on Planning, available [on the AIMA book site](http://aima.cs.berkeley.edu/2nd-ed/newchap11.pdf) sections: 
+
+**Progression planning problems** can be solved with graph searches such as **breadth-first, depth-first, and A***, where the **nodes of the graph are "states" and edges are "actions"**.  
+
+A "state" is the logical conjunction of all boolean ground "fluents", or state variables, that are possible 
+for the problem using Propositional Logic. 
+
+For example, we might have a problem to plan the transport of one cargo (`C1`), on a
+single available plane, `P1`, from one airport to another, `SFO` to `JFK`.
+
+![state space](images/statespace.png)
+
+In this simple example, there are five fluents, or state variables, which means our state 
+space could be as large as ![2to5](images/twotofive.png). Note the following:
+>- While the initial state defines every fluent explicitly, in this case mapped to **TTFFF**, the goal may 
+be a set of states.  Any state that is `True` for the fluent `At(C1,JFK)` meets the goal.
+>- Even though PDDL uses variable to describe actions as "action schema", these problems
+are not solved with First Order Logic.  They are solved with Propositional logic and must
+therefore be defined with concrete (non-variable) actions
+and literal (non-variable) fluents in state descriptions.
+>- The fluents here are mapped to a simple string representing the boolean value of each fluent
+in the system, e.g. **TTFFTT...TTF**.  This will be the state representation in 
+the `AirCargoProblem` class and is compatible with the `Node` and `Problem` 
+classes, and the search methods in the AIMA library.  
+
+
 
 - *The Planning Problem*
 - *Planning with State-space Search*
-
-#### GIVEN: classical PDDL problems
 
 All problems are in the Air Cargo domain.  They have the same action schema defined, but different initial states and goals.
 
@@ -142,6 +170,10 @@ Init(At(C1, SFO) ∧ At(C2, JFK) ∧ At(C3, ATL) ∧ At(C4, ORD)
 Goal(At(C1, JFK) ∧ At(C3, JFK) ∧ At(C2, SFO) ∧ At(C4, SFO))
 ```
 
+
+#### GIVEN: 
+- Classical PDDL problems
+
 #### TODO: Implement methods and functions in `my_air_cargo_problems.py`
 - `AirCargoProblem.get_actions` method including `load_actions` and `unload_actions` sub-functions
 - `AirCargoProblem.actions` method
@@ -154,32 +186,8 @@ Goal(At(C1, JFK) ∧ At(C3, JFK) ∧ At(C2, SFO) ∧ At(C4, SFO))
 * If depth-first takes longer than 10 minutes for Problem 3 on your system, stop the search and provide this information in your report.
 * Use the `run_search` script for your data collection: from the command line type `python run_search -h` to learn more.
 
->#### Why are we setting the problems up this way?  
->Progression planning problems can be 
-solved with graph searches such as breadth-first, depth-first, and A*, where the 
-nodes of the graph are "states" and edges are "actions".  A "state" is the logical 
-conjunction of all boolean ground "fluents", or state variables, that are possible 
-for the problem using Propositional Logic. For example, we might have a problem to 
-plan the transport of one cargo, C1, on a
-single available plane, P1, from one airport to another, SFO to JFK.
-![state space](images/statespace.png)
-In this simple example, there are five fluents, or state variables, which means our state 
-space could be as large as ![2to5](images/twotofive.png). Note the following:
->- While the initial state defines every fluent explicitly, in this case mapped to **TTFFF**, the goal may 
-be a set of states.  Any state that is `True` for the fluent `At(C1,JFK)` meets the goal.
->- Even though PDDL uses variable to describe actions as "action schema", these problems
-are not solved with First Order Logic.  They are solved with Propositional logic and must
-therefore be defined with concrete (non-variable) actions
-and literal (non-variable) fluents in state descriptions.
->- The fluents here are mapped to a simple string representing the boolean value of each fluent
-in the system, e.g. **TTFFTT...TTF**.  This will be the state representation in 
-the `AirCargoProblem` class and is compatible with the `Node` and `Problem` 
-classes, and the search methods in the AIMA library.  
-
-
 ### Part 2 - Domain-independent heuristics
-#### READ: Stuart Russel and Peter Norvig text
-"Artificial Intelligence: A Modern Approach" 3rd edition chapter 10 *or* 2nd edition Chapter 11 on Planning, available [on the AIMA book site](http://aima.cs.berkeley.edu/2nd-ed/newchap11.pdf) section: 
+#### Ref: "Artificial Intelligence: A Modern Approach" 3rd edition chapter 10 *or* 2nd edition Chapter 11 on Planning, available [on the AIMA book site](http://aima.cs.berkeley.edu/2nd-ed/newchap11.pdf) section: 
 
 - *Planning Graph*
 
