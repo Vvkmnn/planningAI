@@ -33,7 +33,7 @@ These strategies are uninformed, and rely only on the immediate frontier to make
 
 Compare and contrast heuristic search result metrics using A* with the and "level-sum" heuristics for Problems 1, 2, and 3.
 
-I'll be honest; I'm not 100% sure if these metrics are supposed to go up our down. That said, `astar_search with h_ignore_preconditions` used the fewest the resources and ran the fastest, implying reduced algorithmic complexity.  TODO: Find out why. 
+I'll be honest; I'm not 100% sure if these metrics are supposed to go up our down. That said, `astar_search with h_ignore_preconditions` used the fewest the resources and ran the fastest, implying reduced algorithmic complexity.   
 
 ### Conclusion
 TODO: What was the best heuristic used in these problems? Was it better than non-heuristic search planning methods for all problems? Why or why not?
