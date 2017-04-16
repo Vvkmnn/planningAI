@@ -34,8 +34,6 @@ These strategies are uninformed, and rely only on the immediate frontier to make
 
 [![](images/InformedStrategies.png)](https://public.tableau.com/views/planningAI/InformedSearchStrategies?:embed=y&:display_count=yes)
 
-Compare and contrast heuristic search result metrics using A* with the and "level-sum" heuristics for Problems 1, 2, and 3.
-
 `astar_search with h_pg_levelsum` used the fewest the resources implying reduced algorithmic complexity. I was very impressed with its performance; but as the most well defined problem, this is not atypical. That said, all of the informed searches outranked the uninformed searches, always found the best solution, often with an increased cost in space (`astar_search_with_h1`) or time (`astar_search_with_h_ignore_preconditions`). 
 
 ### Conclusion
