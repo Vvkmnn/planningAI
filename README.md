@@ -58,8 +58,6 @@ Wasn't really an informed search since `h1` is arbitrary, so it ended up just be
 ##### `astar_search_with_h_ignore_preconditions` 
 Yielded some significant savings as well, and reached an optimal solution faster without the whole planning graph. Definitely the all-star in my book; a good tradeoff between implementational scale and effeciency. 
 
-[![](images/SummaryTable_Highlight.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
-
 ### Problem
 
 ![Progression air cargo search](images/Progression.PNG)
