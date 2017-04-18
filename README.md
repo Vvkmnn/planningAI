@@ -5,12 +5,10 @@ The third project in the [Artificial Intelligence Nanodegree program](https://cl
 ![](images/batch_search.gif)
 
 
-[![](images/SummaryTable.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
 
 ### Results
 
-[![](images/SummaryTable_Highlight.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
-
+[![](images/SummaryTable.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
 
 When `depth_limited_search` found a search, it was typically the quickest to find a solution, but it was almost always insane. The best metric for measuring search performance (in my opinion) is **Optimal Plan Length** which averages the solutions to demonstrate performance across all 3 problems. 
 
@@ -49,7 +47,7 @@ These strategies are uninformed, and rely only on the immediate frontier to make
 | ------------- |-------------| -----|
 | `# note that this is not a true heuristic` This heuristic is just a constant of 1 | This heuristic estimates the minimum number of actions that must be carried out from the current state in order to satisfy all of the goal conditions by ignoring the preconditions required for an action to be executed. |         This heuristic uses a planning graph representation of the problem state space to estimate the sum of all actions that must be carried out from the current state in order to satisfy each individual goal condition. |
 
-[![](images/SummaryTable.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
+[![](images/SummaryTable_Highlight.png)](https://public.tableau.com/views/planningAI/SummaryTable?:embed=y&:display_count=yes)
 
 ##### `astar_search with h_pg_levelsum` 
 Relatively more space effecient than any other search strategy, despite taking a little longer to run. With the entire structure of the planning graph, it is the most well defined problem. 
